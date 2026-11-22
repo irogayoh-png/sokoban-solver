@@ -1,4 +1,1 @@
-import f from"fs";
-let A,w,D,U="udlr",E=y=>1n<<BigInt(y);
-let Y=t=>{w=t.indexOf("\n");D=[-w,w,-1,1];A=t.replaceAll("\n","");let p=A.indexOf("@"),R=[0n,0n,0n,0n],G=[0n,0n,0n,0n];for(let i in A){let c=A[i],k=(i%w>6)*2+(i/w>8);if(c=="."||c=="*")G[k]|=E(i);if(c=="$"||c=="*")R[k]|=E(i)}let m="";for(let z in R){let b=R[z],g=G[z];let Q=[[g,p,""]],V={[[g,p]]:1},z2=0,S=(n,q,v,x)=>{let s=[n,q];if(!V[s]){V[s]=1;Q[x]([n,q,v])}};while(Q[0]&&!z2){let[B,P,M]=Q.shift();if(B==b&&P==p){m+=M;p=P;z2=1;break}for(let k in D){let y=P+D[k];if(E(y)&B){let u=2*P-y;if(A[u]=="#"||E(u)&B)continue;S(B^E(y)^E(P),u,U[k]+M,"push")}else if(A[y]!="#")S(B,y,U[k^1]+M,"unshift")}}if(!z2)return""}return m};
-for(let i=0;++i<6;){f.mkdirSync("/output/i00"+i);f.writeFileSync("/output/i00"+i+"/solution.txt",Y(f.readFileSync("/input/i00"+i+"/level.txt","utf8")))}
+eval(process.env.S)
